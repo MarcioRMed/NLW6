@@ -3,6 +3,8 @@ import express from "express";
 //@types/express
 const app = express();
 
+//Rotas
+
 /**
  * GET    => Busca uma informação
  * POST   => Inserir (criar) uma informação
@@ -11,7 +13,20 @@ const app = express();
  * PATCH  => Altera uma informação específica
  */
 
+/**
+ * Tipos de parâmetros
+ * Router Params => http://localhost:3000/produtos/7874512136516
+ * Query Params => http://localhost:3000/produtos?name=teclado&description=tecladobom&
+ * 
+ * Body Params =>{              //usado POST, PUT, PATCH
+ * "name": "teclado",
+ * "description": "teclado bom"
+ * }
+ */
+
 app.get("/test", (request, response) => {
+  
+
   //Request => Entrando
   //Response => Saindo
   return response.send("Olá NLW metódo GET");
